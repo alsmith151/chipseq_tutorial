@@ -1,0 +1,9 @@
+#Run this from your laptop:
+ssh USERNAME@cbrglogin1.molbiol.ox.ac.uk -L 8002:127.0.0.1:PORT_NUMBER
+
+#Run this from the ssh session:
+echo 'Set jl port to 8002'; jupyter lab --port PORT_NUMBER --no-browser
+
+#Open the notebook on  a browser on your laptop:
+localhost:8002
+
