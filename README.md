@@ -4,24 +4,30 @@ Very quick ChIP-seq processing tutorial.
 
 ## Running the tutorial
 
-### Clone the repo
-
-```
-git clone https://github.com/alsmith151/chipseq_tutorial.git
-```
-
-
 ### Install conda
 
 In order to standardise the enviroment I've made a conda enviroment. First install conda in your /t1-data directory:
 
 ```
+cd /t1-data/user/USERNAME/
+mkdir software/
+cd software/
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 chmod +x Miniconda3-latest-Linux-x86_64.sh
 ./Miniconda3-latest-Linux-x86_64.sh
 ```
 
 Follow the installation instructions.
+
+### Clone the repo
+
+```
+# Clone
+git clone https://github.com/alsmith151/chipseq_tutorial.git
+
+# Enter
+cd chipseq_tutorial/
+```
 
 ### Create conda enviroment
 
@@ -37,7 +43,17 @@ conda activate chip
 
 ### Load the tutorial notebook
 
-It's probably best to do this in another terminal window from your laptop.
+##### If running the above commands connected by RDP to the cluser:
+
+```
+jupyter lab
+
+```
+
+A browser window should open up with the notebook.
+
+
+#### If using SSH from a terminal: 
 
 ```
 #Connect to server with port forwarding
