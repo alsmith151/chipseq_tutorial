@@ -17,6 +17,14 @@ chmod +x Miniconda3-latest-Linux-x86_64.sh
 ./Miniconda3-latest-Linux-x86_64.sh
 ```
 
+*Note* You will need to log in and out again for conda to work correctly
+
+### (Optional) Install Mamba to speed up creating conda environments
+```
+conda install mamba -y
+```
+
+
 Follow the installation instructions.
 
 ### Clone the repo
@@ -35,7 +43,7 @@ Re-create the conda enviroment that I've generated.
 
 ```
 # Create env
-conda env create -f chip.yml
+mamba env create -f chip.yml
 
 # Activate the enviroment
 conda activate chip
@@ -62,7 +70,7 @@ ssh USERNAME@cbrglogin1.molbiol.ox.ac.uk -L 8002:127.0.0.1:PORT_NUMBER
 # Navigate to the cloned repo
 cd PATH_TO_REPO
 
-# Start the notebook server
+# Start the notebook server on the cluster
 echo 'Set jl port to 8002'; jupyter lab --port PORT_NUMBER --no-browser
 ```
 
@@ -70,7 +78,7 @@ To connect to the notebook and run the tutorial, in your browser go to:
 localhost:8002
 
 You will also need the token to access the notebook. You can find this in the terminal window where you activated the notebook server. It looks something like this:
-token=a0c23c3a7fbd0f90ca5cf6500df6c1f01129b0739de60453
+a0c23c3a7fbd0f90ca5cf6500df6c1f01129b0739de60453
 
 Find it at the end of the url, e.g.
 http://localhost:8889/lab?token=a0c23c3a7fbd0f90ca5cf6500df6c1f01129b0739de60453
